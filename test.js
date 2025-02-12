@@ -1,3 +1,4 @@
+/* eslint-disable */
 import fs from 'fs';
 import assert from 'assert';
 import * as util from './worksheet/utility.js';
