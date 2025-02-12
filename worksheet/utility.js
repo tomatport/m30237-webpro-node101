@@ -33,18 +33,12 @@ export function largest(numberArray) {
 
 // Create and export a function called zeroest that accepts an array of integer numbers and returns the one closest to zero
 export function zeroest(numberArray) {
-  const closest = {
-    number: null,
-    numberAbs: null,
-  };
+  let closest = null;
 
-  for (const number of numberArray) {
-    const numberAbs = Math.abs(number);
-    if (numberAbs < closest.numberAbs || closest.numberAbs === null) {
-      closest.numberAbs = numberAbs;
-      closest.number = number;
-    }
-  }
+  numberArray.forEach(n => {
+    const nAbs = Math.abs(n);
+    if (nAbs < closest || closest === null) closest = n;
+  });
 
-  return closest.number;
+  return closest;
 }
