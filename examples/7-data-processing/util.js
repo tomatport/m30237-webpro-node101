@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  * Loop over every line in the CSV file and create an
  * object for each line, adding it to rows using the
@@ -12,7 +13,7 @@ export function cleanup(data) {
     rows: {},
     before: 0,
     after: 0,
-    removed:0
+    removed: 0
   }
   const rows = data.split('\n');
   result.before = rows.length;
